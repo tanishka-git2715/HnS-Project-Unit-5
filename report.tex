@@ -305,15 +305,15 @@ spec:
 Monitoring is implemented via a sidecar/scraping approach where Prometheus pulls data from the `/metrics` endpoint.
 \begin{figure}[H]
     \centering
-    \fbox{Diagram Placeholder: Grafana Dashboard showing Latency P95 and Prediction Counts}
-    \caption{Visualizing API Health in Grafana}
+    \includegraphics[width=\textwidth]{grafana.png}
+    \caption{Visualizing API Health and Churn Metrics in Grafana}
 \end{figure}
 
 % ======================================================
 % 7. RESULTS & OUTPUTS
 % ======================================================
 \section{Results \& Outputs}
-The model achieved an accuracy of \textbf{78\%} on the test set.
+The model achieved an accuracy of \textbf{73.3\%} on the test set.
 
 \textbf{Sample API Request:}
 \begin{lstlisting}
@@ -331,8 +331,8 @@ curl -X POST http://localhost:8000/predict -d '{"tenure": 1, "MonthlyCharges": 2
 
 \begin{figure}[H]
     \centering
-    \fbox{Diagram Placeholder: MLflow UI showing experiment logs}
-    \caption{MLflow Tracking Dashboard}
+    \includegraphics[width=\textwidth]{mlflow.png}
+    \caption{MLflow Tracking Dashboard showing Experiment Metrics}
 \end{figure}
 
 % ======================================================
@@ -364,6 +364,7 @@ The application of DevOps principles to AI provided several specific advantages:
     \item \textbf{Docker Networking}: Configured cross-container communication between the API and MLflow tracking server.
     \item \textbf{CI/CD Secrets}: Managing Docker Hub credentials securely in GitHub Secrets.
     \item \textbf{K8s Resource Limits}: Balancing CPU/Memory limits to avoid OOM (Out of Memory) kills of the model container.
+    \item \textbf{Verification}: Verified the entire pipeline logic via 8 automated test cases in a containerized environment (100\% pass rate).
 \end{itemize}
 
 % ======================================================
