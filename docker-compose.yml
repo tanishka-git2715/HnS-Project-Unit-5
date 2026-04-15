@@ -17,7 +17,7 @@ services:
       - mop-network
 
   mlflow:
-    image: ghcr.io/mlflow/mlflow:latest
+    image: ghcr.io/mlflow/mlflow:v2.9.2
     container_name: mlflow-server
     ports:
       - "5000:5000"
