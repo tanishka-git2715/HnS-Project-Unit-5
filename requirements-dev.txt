@@ -1,0 +1,9 @@
+# Development & Testing
+pytest==8.0.0
+pytest-cov==4.1.0
+httpx==0.26.0
+flake8==7.0.0
+black==24.1.1
+ipykernel==6.29.0
+matplotlib==3.8.2
+seaborn==0.13.2

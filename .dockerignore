@@ -1,0 +1,17 @@
+.git
+__pycache__
+*.pyc
+mlruns
+mlartifacts
+models
+data/raw
+.pytest_cache
+.coverage
+htmlcov
+.ipynb_checkpoints
+.venv
+venv
+Dockerfile
+docker-compose.yml
+.github
+k8s
