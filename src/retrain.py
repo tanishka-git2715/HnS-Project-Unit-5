@@ -22,4 +22,3 @@ def trigger_retraining():
 
 if __name__ == "__main__":
     trigger_retraining()
- Mount monitoring/grafana/dashboards to avoid errors with empty dirs

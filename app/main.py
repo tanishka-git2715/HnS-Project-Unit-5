@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException, Depends
+from fastapi import FastAPI, HTTPException, Depends, Response
 from fastapi.responses import JSONResponse
 from prometheus_client import generate_latest, CONTENT_TYPE_LATEST
 from app.schemas import ChurnInput, PredictionResponse, HealthResponse
@@ -118,5 +118,3 @@ def retrain_model():
         return {"message": "Retraining triggered and model reloaded successfully."}
     else:
         raise HTTPException(status_code=500, detail="Retraining failed.")
-
-from fastapi import Response

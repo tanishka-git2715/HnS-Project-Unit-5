@@ -95,4 +95,3 @@ def train():
 
 if __name__ == "__main__":
     train()
- Mount folder monitoring/grafana/dashboards to avoid errors with empty dirs
